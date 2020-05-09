@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'com.abndev'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // Logging dependencies
+    compile 'ch.qos.logback:logback-classic:1.2.3'
+    compile 'ch.qos.logback.contrib:logback-json-classic:0.1.5'
+    compile 'ch.qos.logback.contrib:logback-jackson:0.1.5'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.5'
+    compile 'org.codehaus.janino:janino:3.0.8'
+    testCompile 'ch.qos.logback:logback-classic:1.2.3'
+    testCompile 'ch.qos.logback.contrib:logback-json-classic:0.1.5'
+    testCompile 'ch.qos.logback.contrib:logback-jackson:0.1.5'
+    testCompile 'com.fasterxml.jackson.core:jackson-databind:2.9.5'
+    testCompile 'org.codehaus.janino:janino:3.0.8'
+    // end logging dependencies
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
