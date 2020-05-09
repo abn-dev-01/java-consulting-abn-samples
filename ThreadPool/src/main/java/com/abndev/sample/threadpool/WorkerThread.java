@@ -22,7 +22,7 @@ public class WorkerThread
 
     @Override
     public void run() {
-        Thread.currentThread().setName("Thread_" + name);
+        Thread.currentThread().setName(name);
         LOG.info("{} Start. Command = {}", Thread.currentThread().getName(), command);
         processCommand();
         LOG.info("{} End. Command = {}", Thread.currentThread().getName(), command);
