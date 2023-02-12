@@ -3,6 +3,5 @@
 //
 rootProject.name = 'java-consulting-abn-samples'
 
-//include "thread-pool"
-//project(":thread-pool").projectDir = new File("thread-pool")
 include 'thread-pool'
+include 'aws-lambda-java-amazon'

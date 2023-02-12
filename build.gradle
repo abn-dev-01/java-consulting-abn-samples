@@ -49,7 +49,8 @@ subprojects {
         testCompileOnly("${lombok_lombok}")
         testAnnotationProcessor("${lombok_lombok}")
 
-        testImplementation('org.junit.jupiter:junit-jupiter') { version { "${junit_vers}" } }
+        testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: "${junit_vers}"
+        testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: "${junit_vers}"
     }
 
     test {
@@ -77,3 +78,4 @@ subprojects {
 
 //------------- ------------- ------------- ------------- ------------- -------------
 project(':thread-pool') {}
+project(':aws-lambda-java-amazon') {}
