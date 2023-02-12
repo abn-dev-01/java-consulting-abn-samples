@@ -1,6 +1,6 @@
 # java-samples is a collection of examples, Java Program exmamples, Java samples.
 
-Java Sample Projects
+## Java Sample Projects
 
 # !!>> Look into BRANCHES to get examples. <<!!
 
@@ -13,17 +13,18 @@ Java Sample Projects
 * Flyway Flywaydb 
 * Liquibase
 
-
+### Database:
 * PosthgreSQL
 * MySQL, Aurora-MySQL
 * H2
 
+### Amazon
 * Amazon, Amazon services
 * aws-sdk, Amazon SDK
 * amazon-ec2, aws-ec3
 * AWS-Lambda java
 
-SOAP
+### SOAP
 * apache-cxf
 * WSSj4 and signing by Open certificate a request to a SEP 
 
