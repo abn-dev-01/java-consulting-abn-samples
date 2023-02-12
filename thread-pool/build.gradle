@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'com.abn-java'
+version 'unspecified'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly("${lombok_lombok}")
+    annotationProcessor("${lombok_lombok}")
+    testCompileOnly("${lombok_lombok}")
+    testAnnotationProcessor("${lombok_lombok}")
+
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: "${log4j2_vers}"
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: "${log4j2_vers}"
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j2-impl', version: "${log4j2_vers}"
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,13 +1,10 @@
 package com.abndev.sample.threadpool;
 
-import org.slf4j.Logger;
+import lombok.extern.log4j.Log4j2;
 
-public class WorkerThread
-        implements Runnable {
-
-    private static final Logger LOG = org.slf4j.LoggerFactory.getLogger(WorkerThread.class);
+@Log4j2
+public class WorkerThread implements Runnable {
     private final String name;
-
     private String command;
 
     /**
@@ -33,8 +30,7 @@ public class WorkerThread
             final long sleepTime = 1000 + Math.round(Math.random() * 10000);
             LOG.info(" > {} sleep: {}", Thread.currentThread().getName(), sleepTime);
             Thread.sleep(sleepTime);
-        }
-        catch (InterruptedException e) {
+        } catch (InterruptedException e) {
             LOG.error("Thread interrupted. ", e);
         }
     }

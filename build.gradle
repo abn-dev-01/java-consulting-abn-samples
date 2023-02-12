@@ -1,0 +1,79 @@
+//------------- ------------- ------------- ------------- ------------- -------------
+plugins {
+    id 'org.springframework.boot' version '3.0.2' apply(false)
+    id 'io.spring.dependency-management' version '1.1.0' apply(false)
+    id 'io.freefair.lombok' version "6.6.1" apply(false)
+}
+
+ext {
+    set("lombok_lombok", "org.projectlombok:lombok")
+    set("lombokVers", "1.8.12")
+    set("log4j2_vers", "2.19.0")
+    set("junit_vers", "5.9.2")
+}
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+//------------- ------------- ------------- ------------- ------------- -------------
+subprojects {
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+
+    apply plugin: "java"
+    apply plugin: "idea"
+    apply plugin: "io.spring.dependency-management"
+    apply plugin: "io.freefair.lombok"
+
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    dependencies {
+        implementation('org.apache.logging.log4j:log4j-api') { version { "${log4j2_vers}" } }
+        implementation('org.apache.logging.log4j:log4j-core') { version { "${log4j2_vers}" } }
+        implementation('org.apache.logging.log4j:log4j-slf4j2-impl') { version { "${log4j2_vers}" } }
+
+        compileOnly("${lombok_lombok}")
+        annotationProcessor("${lombok_lombok}")
+        testCompileOnly("${lombok_lombok}")
+        testAnnotationProcessor("${lombok_lombok}")
+
+        testImplementation('org.junit.jupiter:junit-jupiter') { version { "${junit_vers}" } }
+    }
+
+    test {
+        useJUnitPlatform()
+        testLogging {
+            events "passed", "skipped", "failed"
+        }
+    }
+
+    tasks.withType(JavaCompile) {
+        // options.compilerArgs += "--enable-preview"
+        options.encoding = 'UTF-8'
+        options.compilerArgs << '-parameters'
+    }
+
+    tasks.withType(Test) {
+        // jvmArgs += "--enable-preview"
+    }
+
+    tasks.withType(JavaExec) {
+        // jvmArgs += '--enable-preview'
+    }
+
+}
+
+//------------- ------------- ------------- ------------- ------------- -------------
+project(':thread-pool') {}
