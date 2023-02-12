@@ -1,9 +1,15 @@
-# java-samples is a collection of examples, Java Program exmamples, Java samples.
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Java17](https://img.shields.io/badge/java-17-blue)](https://img.shields.io/badge/java-17-blue)
+[![Gradle7.6](https://img.shields.io/badge/gradle-v7-blue)](https://img.shields.io/badge/gradle-v7-blue)
 
-## Java Sample Projects
+# Andrew Nikin Java Consulting
 
-# !!>> Look into BRANCHES to get more examples. <<!!
+-----
 
+> `java-consulting-abn-samples` is a collection of examples, Java Program examples, Java samples.
+
+
+### Technologies in examples: 
 * Java 
 * Java concurrent and multithreading
 * Java generics 
@@ -29,4 +35,4 @@
 * WSSj4 and signing by Open certificate a request to a SEP 
 
 ---
-Are you interested in something else? Do not hesiatete to write to TELEGRAM @abn_java
+Are you interested in something else? Do not hesitate to write to TELEGRAM @abn_java
