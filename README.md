@@ -1,5 +1,9 @@
-# java-samples is a collection of examples, Java Program exmamples, Java samples.
+### Are you interested in something else? | Do not hesiatete to write to TELEGRAM @abn_java
+---
 
+### java-samples is a collection of examples, Java Program exmamples, Java samples.
+
+---
 Java Sample Projects
 
 # !!>> Look into BRANCHES to get examples. <<!!
